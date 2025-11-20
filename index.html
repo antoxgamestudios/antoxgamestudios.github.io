@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Antox Game Studios | Yakında</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+* { box-sizing:border-box; margin:0; padding:0; }
+body {
+  font-family:'Inter',sans-serif;
+  scroll-behavior:smooth;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  background: linear-gradient(to right, #0f0f0f, #1a1a1a);
+}
+
+/* NAVBAR */
+nav {
+  position:sticky;
+  top:0;
+  background:#111;
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  padding:14px 0;
+  z-index:10;
+}
+nav a {
+  color:#f3f4f6;
+  font-weight:600;
+  text-decoration:none;
+  transition:color 0.3s;
+}
+nav a:hover {color:#ff69b4;}
+
+/* HERO */
+.hero {
+  text-align:center;
+  padding:120px 20px 100px;
+  position:relative;
+  color:white;
+}
+.hero .logo {
+  width:160px;
+  height:160px;
+  border-radius:50%;
+  border:4px solid #ff69b4;
+  margin:auto;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:24px;
+  font-weight:bold;
+}
+.hero h1 {font-size:3rem; font-weight:800; margin-top:30px;}
+.hero p {margin-top:16px; font-size:1.2rem; line-height:1.6; max-width:680px; margin:auto;}
+
+/* ORTA İÇERİK */
+.main-content {
+  background:white;
+  padding:120px 20px;
+  color:#111;
+  min-height:500px;
+  text-align:center;
+}
+.main-content h2 {font-size:2rem; margin-bottom:20px;}
+.main-content p {max-width:700px; margin:auto; font-size:1.1rem; line-height:1.6;}
+
+/* İLETİŞİM */
+#iletisim {
+  padding:80px 20px;
+  text-align:center;
+  background:white;
+}
+.iletisim-container {display:flex; justify-content:center; gap:30px; margin-bottom:40px;}
+.iletisim-ikon img {width:40px; height:40px; transition:transform 0.3s;}
+.iletisim-ikon img:hover {transform:scale(1.2);}
+
+/* SCROLL-UP MODERN */
+.scroll-top {
+  position:fixed;
+  bottom:30px;
+  right:30px;
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  border:2px solid #fff;
+  background:transparent;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  cursor:pointer;
+  opacity:0;
+  pointer-events:none;
+  z-index:100;
+  animation: blink 2s infinite;
+}
+.scroll-top.show {
+  opacity:1;
+  pointer-events:auto;
+}
+.scroll-top span {
+  font-size:24px;
+  color:#9b30ff; /* mor ok rengi */
+  transition:transform 0.3s;
+}
+.scroll-top:hover span {transform:scale(1.2);}
+
+/* ANİMASYON */
+@keyframes blink {
+  0%, 50% { border-color: #fff; }
+  25%, 75% { border-color: #9b30ff; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#hero">Ana Sayfa</a>
+  <a href="#iletisim">İletişim</a>
+</nav>
+
+<section class="hero" id="hero">
+  <div class="logo">ANTOX</div>
+  <h1>YAKINDA</h1>
+  <p>Enter the Zone – Antox Game Studios'un yeni projeleri çok yakında sizlerle!</p>
+</section>
+
+<section class="main-content">
+  <h2>Geliştirme Sürecinde</h2>
+  <p>Yeni içerikler ve sürprizler üzerinde çalışıyoruz. Web sitemizi güncel tutacağız ve en iyi deneyimi sizlere sunacağız. Hazır olun, çok yakında buradayız!</p>
+</section>
+
+<section id="iletisim">
+  <div class="iletisim-container">
+    <a href="https://instagram.com/antoxgamestudios" target="_blank" class="iletisim-ikon">
+      <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" />
+    </a>
+    <a href="mailto:antoxgamestudios@outlook.com.tr" class="iletisim-ikon">
+      <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email" />
+    </a>
+  </div>
+</section>
+
+<div class="scroll-top" id="scrollTop"><span>↑</span></div>
+
+<footer>
+  © 2025 Antox Game Studios. Tüm Hakları Saklıdır.
+</footer>
+
+<script>
+const scrollBtn = document.getElementById('scrollTop');
+window.addEventListener('scroll', () => {
+  if(window.scrollY > 300){
+    scrollBtn.classList.add('show');
+  } else{
+    scrollBtn.classList.remove('show');
+  }
+});
+scrollBtn.addEventListener('click', ()=>{
+  window.scrollTo({top:0, behavior:'smooth'});
+});
+</script>
+
+</body>
+  </html>
