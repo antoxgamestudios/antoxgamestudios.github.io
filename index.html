@@ -4,134 +4,143 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>CarZone Demo - Antox Game Studios</title>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
   body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Orbitron', sans-serif;
-    background: #0a0a0a;
+    font-family: 'Inter', sans-serif;
+    background-color: #121212;
     color: #fff;
-    overflow-x: hidden;
+    scroll-behavior: smooth;
   }
 
-  /* Yavaş neon arka plan hareketi mobil için optimize */
-  .background {
+  header {
     position: fixed;
+    top: 0;
     width: 100%;
-    height: 100%;
-    top: 0; left: 0;
-    background: linear-gradient(45deg, #ff00ff, #00ffff, #ff6600, #00ff00);
-    background-size: 400% 400%;
-    animation: gradientMove 30s ease infinite;
-    z-index: -1;
-  }
-
-  @keyframes gradientMove {
-    0% {background-position: 0% 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
-  }
-
-  .hero {
-    height: 100vh;
+    background-color: #1f1f1f;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
+    justify-content: space-around;
+    padding: 15px 0;
+    z-index: 1000;
+    font-weight: 600;
   }
 
-  .hero h1 {
-    font-size: 3rem;
-    color: #ff00ff;
-    text-shadow: 0 0 15px #ff00ff, 0 0 30px #ff00ff;
-    animation: glow 2s infinite alternate;
-  }
-
-  @keyframes glow {
-    from { text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff; }
-    to { text-shadow: 0 0 25px #ff00ff, 0 0 50px #ff00ff; }
-  }
-
-  .hero p {
+  header a {
+    color: #fff;
+    text-decoration: none;
     font-size: 1rem;
-    margin-top: 15px;
+  }
+
+  header a:hover {
     color: #ccc;
   }
 
+  .section {
+    padding: 100px 20px 60px 20px;
+    min-height: 100vh;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 30px;
+  }
+
   .buttons {
-    margin-top: 25px;
     display: flex;
+    justify-content: center;
     gap: 15px;
     flex-wrap: wrap;
-    justify-content: center;
+    margin-bottom: 30px;
   }
 
   .btn {
-    padding: 12px 20px;
-    border: 2px solid #ff00ff;
-    color: #fff;
+    padding: 12px 25px;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
     text-decoration: none;
-    font-weight: bold;
-    border-radius: 25px;
-    transition: all 0.3s;
+    color: #fff;
+    background-color: #1f1f1f;
+    transition: background-color 0.2s;
   }
 
   .btn:hover {
-    background: #ff00ff;
-    color: #000;
-    transform: scale(1.1);
-  }
-
-  .social {
-    margin-top: 30px;
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-  }
-
-  .social img {
-    width: 45px;
-    transition: transform 0.3s;
-  }
-
-  .social img:hover {
-    transform: scale(1.2);
+    background-color: #333;
   }
 
   .game-image {
-    margin-top: 30px;
-    width: 80%;
-    border-radius: 15px;
-    box-shadow: 0 0 30px #ff00ff;
+    max-width: 90%;
+    margin: 0 auto 30px auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  }
+
+  .social {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .social img {
+    width: 40px;
   }
 
   footer {
-    text-align: center;
-    padding: 15px;
-    color: #777;
     font-size: 0.8rem;
+    color: #777;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 480px) {
+    header a { font-size: 0.9rem; }
+    h1 { font-size: 2rem; }
   }
 </style>
 </head>
 <body>
-<div class="background"></div>
 
-<div class="hero">
+<header>
+  <a href="#ana-sayfa">Ana Sayfa</a>
+  <a href="#oyun-hakkinda">Oyun Hakkında</a>
+  <a href="#iletisim">İletişim</a>
+</header>
+
+<div id="ana-sayfa" class="section">
   <h1>CarZone Demo Coming Soon</h1>
-  <p>Antox Game Studios sunar – Mobilde devrim yaratacak!</p>
-
+  <p>Antox Game Studios sunar – mobilde devrim yaratacak!</p>
   <div class="buttons">
-    <a href="https://instagram.com/antoxgamestudios" class="btn" target="_blank">Bizi Takip Et</a>
+    <a href="https://instagram.com/antoxgamestudios" class="btn" target="_blank">Instagram</a>
     <a href="mailto:antoxgamestudios@outlook.com.tr" class="btn">Mail Gönder</a>
   </div>
+</div>
 
+<div id="oyun-hakkinda" class="section">
+  <h1>Oyun Hakkında</h1>
+  <p>CarZone, mobilde gerçekçi araba deneyimi ve yarış heyecanını bir araya getiriyor. Demo sürümümüzde oyunun temel mekaniklerini keşfedebilirsiniz.</p>
   <div class="game-image">
     <img id="demo-image" src="" alt="CarZone Görseli">
   </div>
+</div>
 
+<div id="iletisim" class="section">
+  <h1>İletişim</h1>
+  <p>Her türlü soru ve geri bildiriminiz için bizimle iletişime geçebilirsiniz.</p>
+  <div class="buttons">
+    <a href="https://instagram.com/antoxgamestudios" class="btn" target="_blank">Instagram</a>
+    <a href="mailto:antoxgamestudios@outlook.com.tr" class="btn">Mail Gönder</a>
+  </div>
   <div class="social">
     <a href="https://instagram.com/antoxgamestudios" target="_blank">
       <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
@@ -150,5 +159,6 @@
   // Fotoğraf linki geldiğinde buraya ekleyebilirsin
   // document.getElementById('demo-image').src = "FOTOĞRAF_LINKİN";
 </script>
+
 </body>
 </html>
