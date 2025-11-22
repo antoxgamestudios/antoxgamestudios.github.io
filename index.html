@@ -85,6 +85,27 @@
     box-shadow: 0 2px 8px rgba(0,0,0,0.3);
   }
 
+  /* İletişim bölümü yeşil tema */
+  #iletisim {
+    background-color: #2f5d4e; /* Harmanlanmış yeşil tonu */
+    color: #fff;
+  }
+
+  #iletisim input, #iletisim textarea {
+    width: 80%;
+    max-width: 300px;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+  }
+
+  #iletisim textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+
   .social {
     display: flex;
     justify-content: center;
@@ -100,7 +121,7 @@
     font-size: 0.8rem;
     color: #777;
     text-align: center;
-    margin-bottom: 20px;
+    margin: 20px 0;
   }
 
   @media (max-width: 480px) {
@@ -136,11 +157,20 @@
 
 <div id="iletisim" class="section">
   <h1>İletişim</h1>
-  <p>Her türlü soru ve geri bildiriminiz için bizimle iletişime geçebilirsiniz.</p>
+  <p>Her türlü soru, geri bildirim veya iş birliği için bizimle iletişime geçebilirsiniz. Formu doldurun veya direkt Instagram ve mail üzerinden ulaşın.</p>
+  
   <div class="buttons">
     <a href="https://instagram.com/antoxgamestudios" class="btn" target="_blank">Instagram</a>
     <a href="mailto:antoxgamestudios@outlook.com.tr" class="btn">Mail Gönder</a>
   </div>
+
+  <div style="margin: 20px 0;">
+    <input type="text" placeholder="Adınız"><br>
+    <input type="email" placeholder="E-posta"><br>
+    <textarea placeholder="Mesajınız"></textarea><br>
+    <button class="btn" style="margin-top:10px;">Gönder</button>
+  </div>
+
   <div class="social">
     <a href="https://instagram.com/antoxgamestudios" target="_blank">
       <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
@@ -152,7 +182,7 @@
 </div>
 
 <footer>
-  &copy; 2025 Antox Game Studios
+  © 2025 Antox Game Studios — Tüm Hakları Saklıdır (All rights reserved)
 </footer>
 
 <script>
