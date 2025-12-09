@@ -3,9 +3,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lethe Studios İlhamı - Şık ve Resmi Web Sitesi</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Sade ve Şık Web Sitesi - Firma Adı</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS Stilleri (style.css'ten aktarıldı) */
+
+        /* Genel Ayarlar ve Fontlar */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif; /* Montserrat fontu */
+            line-height: 1.6;
+            color: #333333; /* Koyu Gri metin */
+            background-color: #FFFFFF; /* Beyaz arka plan */
+        }
+
+        /* Değişkenler (Renk Paleti) */
+        :root {
+            --primary-color: #004A77; /* Koyu Mavi Aksan */
+            --text-color: #333333;
+            --light-bg: #F4F4F4; /* Açık Gri (Farklı bölümler için kullanılabilir) */
+            --white: #FFFFFF;
+        }
+
+        /* Temel Yapı ve Konteyner */
+        .container {
+            max-width: 1200px; /* İçeriğin genişliğini sınırlar */
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- HEADER Stili --- */
+        .main-header {
+            background: var(--white);
+            padding: 20px 0;
+            border-bottom: 1px solid #eee; /* Hafif bir ayırıcı */
+        }
+
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo h1 {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .main-nav ul li {
+            margin-left: 30px;
+        }
+
+        .main-nav ul li a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .main-nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        /* CTA Linki Vurgusu */
+        .main-nav .cta-link {
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+            padding: 8px 15px;
+            border-radius: 4px;
+        }
+
+        /* --- HERO SECTION Stili --- */
+        .hero-section {
+            text-align: center;
+            padding: 150px 0; /* Bolca beyaz alan */
+            background: var(--light-bg); /* Hafif arka plan */
+        }
+
+        .hero-title {
+            font-size: 3em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .hero-subtitle {
+            font-size: 1.25em;
+            margin-bottom: 40px;
+            color: var(--text-color);
+        }
+
+        /* --- Buton Stili (CTA) --- */
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: background-color 0.3s, opacity 0.3s;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            opacity: 0.9;
+        }
+
+        /* --- SERVİSLER Bölümü Stili --- */
+        .services-section {
+            padding: 80px 0; /* Yine bolca boşluk */
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2em;
+            font-weight: 700;
+            margin-bottom: 60px;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 3 Sütunlu düzen */
+            gap: 40px;
+        }
+
+        .service-item {
+            padding: 30px;
+            border: 1px solid #eee;
+            text-align: center;
+            transition: box-shadow 0.3s;
+        }
+
+        .service-item:hover {
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Hafif gölge efekti */
+        }
+
+        .service-item .icon {
+            font-size: 2em;
+            display: block;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .service-item h3 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        /* --- FOOTER Stili --- */
+        .main-footer {
+            background: #222; /* Koyu arka plan */
+            color: #bbb;
+            padding: 30px 0;
+            font-size: 0.9em;
+        }
+
+        .main-footer .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Mobil Duyarlılık İçin Basit Kural */
+        @media (max-width: 768px) {
+            .main-header .container, .main-footer .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .main-nav ul {
+                margin-top: 15px;
+                flex-direction: column;
+                gap: 10px;
+            }
+            .main-nav ul li {
+                margin-left: 0;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -64,4 +255,4 @@
     </footer>
 
 </body>
-                </html>
+                            </html>
